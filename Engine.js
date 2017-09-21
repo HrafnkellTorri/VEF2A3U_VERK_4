@@ -1,4 +1,4 @@
-// Liður #1
+// Chapter #1
 
 var prototypeOF = {
   		Name: "Shield",
@@ -15,7 +15,7 @@ OS.Voice = "Light";
 
 document.getElementById("child").innerHTML += "Child ---> " + OS.Name + " " + OS.Voice + "<br> End of Part I";
 
-// Liður #2
+// Chapter #2
 i = 0;
 
 function Spaceship(n,h)
@@ -46,18 +46,6 @@ showname(SpaceRacer);
 
 showallpropsandmethods();
 
-
-
-
-
-
-
-
-
-
-
-
-
 function showallpropsandmethods()
 {
 	for (var prop in SpaceRacer) 
@@ -70,7 +58,7 @@ function showallpropsandmethods()
         document.getElementById("disp").innerHTML += (" 4. " + prop + " = " + Damage[prop] + "<br>");
 	}
 
-	document.getElementById("disp").innerHTML += ("End of Part II");
+	document.getElementById("disp").innerHTML += ("<br> End of Part II");
 
 function Prefix(i)
 	{
@@ -95,4 +83,22 @@ function Prefix(i)
 			
 		}
 	}
+}
+
+//Chapter 3
+
+function Teacher(first, last, age, gender, interests, subject) {
+  Person.call(this, first, last, age, gender, interests);  //Callað er Person functionið og allar breytunar með sama nafn eru erfðar frá person inn í teacher.
+  this.subject = subject; //Subject er ekki til svo hún er skilgreynd sér.
+}
+
+function Teacher(first, last, age, gender, interests, subject) {
+  this.name = { //Nafnið sett í einn var og festur saman svo hann myndar heilt nafn
+    first,
+    last
+  };
+  this.age = age; //Stillt viðeigandi breytur
+  this.gender = gender;
+  this.interests = interests;
+  this.subject = subject;
 }
